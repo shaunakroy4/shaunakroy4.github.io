@@ -3,58 +3,612 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Shaunak Roy | Quantitative Research</title>
+
+    <meta name="description"
+          content="Shaunak Roy — PhD in Physics, quantitative research, statistical physics, complex systems and quantitative finance.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Helvetica, Arial, sans-serif;
+            background: #0b0f14;
+            color: #e6edf3;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+        }
+
+        /* Navigation */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11, 15, 20, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #202832;
+        }
+
+        .nav-inner {
+            height: 65px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            font-size: 0.9rem;
+            color: #9da7b3;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        /* Hero */
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .eyebrow {
+            color: #8b949e;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: 1.05;
+            letter-spacing: -3px;
+            margin-bottom: 25px;
+        }
+
+        .hero-title {
+            font-size: clamp(1.3rem, 3vw, 2rem);
+            color: #aeb8c4;
+            margin-bottom: 25px;
+        }
+
+        .hero-description {
+            max-width: 760px;
+            font-size: 1.15rem;
+            color: #9da7b3;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 11px 20px;
+            border: 1px solid #303944;
+            border-radius: 7px;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #161c24;
+            border-color: #66717f;
+        }
+
+        .button-primary {
+            background: #e6edf3;
+            color: #0b0f14;
+            border-color: #e6edf3;
+        }
+
+        .button-primary:hover {
+            background: white;
+        }
+
+        /* Sections */
+
+        section {
+            padding: 90px 0;
+            border-top: 1px solid #202832;
+        }
+
+        .section-label {
+            color: #8b949e;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+        }
+
+        .section-text {
+            max-width: 800px;
+            color: #9da7b3;
+            font-size: 1.05rem;
+        }
+
+        /* Projects */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 35px;
+        }
+
+        .project {
+            padding: 28px;
+            border: 1px solid #252d36;
+            border-radius: 10px;
+            background: #0e1319;
+            transition: 0.2s;
+        }
+
+        .project:hover {
+            transform: translateY(-3px);
+            border-color: #4b5563;
+        }
+
+        .project h3 {
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .project p {
+            color: #8f99a5;
+            font-size: 0.95rem;
+        }
+
+        .project-tags {
+            margin-top: 18px;
+            color: #7f8995;
+            font-size: 0.8rem;
+        }
+
+        /* Skills */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .skill {
+            border: 1px solid #303944;
+            padding: 7px 12px;
+            border-radius: 5px;
+            color: #aeb8c4;
+            font-size: 0.9rem;
+        }
+
+        /* Research */
+
+        .research-box {
+            margin-top: 30px;
+            padding: 30px;
+            border-left: 3px solid #596575;
+            background: #0e1319;
+        }
+
+        .research-box h3 {
+            margin-bottom: 10px;
+        }
+
+        .research-box p {
+            color: #9da7b3;
+        }
+
+        /* Contact */
+
+        .contact-links {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            color: #b7c0ca;
+        }
+
+        .contact-links a:hover {
+            color: white;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 35px 0;
+            border-top: 1px solid #202832;
+            color: #687380;
+            font-size: 0.85rem;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 700px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .hero {
+                min-height: 75vh;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Shaunak Roy</h1>
+<!-- Navigation -->
 
-    <h2>PhD in Physics · Quantitative Research · Statistical Physics · Complex Systems</h2>
+<nav>
+    <div class="container nav-inner">
 
-    <p>
-        Theoretical and computational physicist working at the intersection of
-        statistical physics, stochastic processes, complex systems, network science,
-        and quantitative modelling.
-    </p>
+        <div class="logo">Shaunak Roy</div>
 
-    <p>
-        Currently developing research interests in quantitative finance,
-        market microstructure, risk modelling, systemic risk, and financial
-        time series.
-    </p>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#research">Research</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
 
-    <h2>Selected Projects</h2>
+    </div>
+</nav>
 
-    <ul>
-        <li>Order Book & Market Microstructure</li>
-        <li>Systemic Risk & Network Contagion</li>
-        <li>Extreme Events in Complex Networks</li>
-        <li>Portfolio Optimization & Risk</li>
-    </ul>
 
-    <h2>Research</h2>
+<!-- Hero -->
 
-    <p>
-        PhD research on stochastic failure, extreme events, vulnerability,
-        and resilience in complex networks.
-    </p>
+<header class="hero">
 
-    <h2>Technical Skills</h2>
+    <div class="container hero-content">
 
-    <p>
-        Python · C · NumPy · SciPy · Pandas ·
-        Statistics · Probability · Machine Learning · Optimization ·
-        Stochastic Processes · Market Microstructure · Risk Modelling
-    </p>
+        <div class="eyebrow">
+            PHYSICS · COMPLEX SYSTEMS · QUANTITATIVE RESEARCH
+        </div>
 
-    <h2>Links</h2>
+        <h1>Shaunak Roy</h1>
 
-    <p>
-        <a href="https://github.com/shaunakroy4">GitHub</a> |
-        <a href="https://www.linkedin.com/in/shaunak-roy-aa3919229/">LinkedIn</a> |
-        <a href="https://www.researchgate.net/profile/Shaunak-Roy-2">ResearchGate</a>
-    </p>
+        <div class="hero-title">
+            PhD in Physics → Quantitative Research
+        </div>
+
+        <p class="hero-description">
+            Theoretical and computational physicist working with
+            stochastic processes, statistical modelling, complex systems,
+            numerical simulation and quantitative methods.
+            Currently developing research in quantitative finance,
+            market microstructure, risk and financial modelling.
+        </p>
+
+        <div class="buttons">
+
+            <a class="button button-primary"
+               href="https://github.com/shaunakroy4">
+                GitHub
+            </a>
+
+            <a class="button"
+               href="https://www.linkedin.com/in/shaunak-roy-aa3919229/">
+                LinkedIn
+            </a>
+
+            <a class="button"
+               href="https://www.researchgate.net/profile/Shaunak-Roy-2">
+                ResearchGate
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- About -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-label">About</div>
+
+        <h2>From statistical physics to quantitative finance.</h2>
+
+        <p class="section-text">
+            My research background is in statistical physics and complex
+            systems, where I study how microscopic stochastic fluctuations
+            can produce collective behaviour, extreme events and systemic
+            failure.
+            <br><br>
+            My doctoral research investigated failure, vulnerability,
+            resilience and intervention in complex networks using analytical
+            modelling, stochastic simulation and large-scale computational
+            experiments.
+            <br><br>
+            I am now extending these ideas toward quantitative finance,
+            with interests in financial markets, market microstructure,
+            stochastic modelling, portfolio risk and systemic risk.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Projects -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <div class="section-label">Selected Work</div>
+
+        <h2>Projects</h2>
+
+        <div class="projects">
+
+            <div class="project">
+
+                <h3>Order Book & Market Microstructure</h3>
+
+                <p>
+                    Building a limit-order-book framework to study
+                    order flow, price formation and market dynamics.
+                </p>
+
+                <div class="project-tags">
+                    Python · Market Microstructure · Data Analysis
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Systemic Risk & Network Contagion</h3>
+
+                <p>
+                    Applying complex-network methods to study
+                    vulnerability, contagion and systemic behaviour
+                    in interconnected financial systems.
+                </p>
+
+                <div class="project-tags">
+                    Network Science · Risk · Statistical Modelling
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Extreme Events in Complex Networks</h3>
+
+                <p>
+                    Theoretical and computational study of extreme
+                    stochastic fluctuations and failure in interacting
+                    network systems.
+                </p>
+
+                <div class="project-tags">
+                    Stochastic Processes · Network Science · Simulation
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Portfolio Optimization & Risk</h3>
+
+                <p>
+                    Quantitative exploration of portfolio allocation,
+                    stochastic asset returns, Monte Carlo methods
+                    and portfolio risk.
+                </p>
+
+                <div class="project-tags">
+                    Probability · Optimization · Monte Carlo
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Research -->
+
+<section id="research">
+
+    <div class="container">
+
+        <div class="section-label">Research</div>
+
+        <h2>Research Background</h2>
+
+        <div class="research-box">
+
+            <h3>PhD in Physics — IISER Pune</h3>
+
+            <p>
+                <strong>2019–2026</strong><br><br>
+
+                Doctoral research on stochastic failure and resilience
+                in complex networks, focusing on intrinsic fluctuations,
+                extreme events, node vulnerability, failure propagation
+                and network repair.
+            </p>
+
+        </div>
+
+
+        <div class="research-box">
+
+            <h3>Publication</h3>
+
+            <p>
+                Shaunak Roy, Vimal Kishore, M. S. Santhanam (2026)
+                <br>
+                <em>Approach to Network Failure Due to Intrinsic Fluctuations</em>
+                <br>
+                Physical Review E
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Skills -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <div class="section-label">Technical Toolkit</div>
+
+        <h2>Skills</h2>
+
+        <div class="skills">
+
+            <span class="skill">Python</span>
+            <span class="skill">C++</span>
+            <span class="skill">C</span>
+            <span class="skill">SQL</span>
+
+            <span class="skill">NumPy</span>
+            <span class="skill">SciPy</span>
+            <span class="skill">Pandas</span>
+            <span class="skill">Matplotlib</span>
+
+            <span class="skill">Probability</span>
+            <span class="skill">Statistics</span>
+            <span class="skill">Optimization</span>
+            <span class="skill">Machine Learning</span>
+
+            <span class="skill">Stochastic Processes</span>
+            <span class="skill">Network Science</span>
+            <span class="skill">Market Microstructure</span>
+            <span class="skill">Risk Modelling</span>
+
+            <span class="skill">Linux</span>
+            <span class="skill">SLURM</span>
+            <span class="skill">HPC</span>
+            <span class="skill">Git</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Contact -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-label">Connect</div>
+
+        <h2>Let's connect.</h2>
+
+        <p class="section-text">
+            I am interested in quantitative research, quantitative
+            finance, financial modelling, market microstructure,
+            risk and related research roles.
+        </p>
+
+        <div class="contact-links">
+
+            <a href="https://github.com/shaunakroy4">
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/shaunak-roy-aa3919229/">
+                LinkedIn
+            </a>
+
+            <a href="https://www.researchgate.net/profile/Shaunak-Roy-2">
+                ResearchGate
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+
+<footer>
+
+    <div class="container">
+        © 2026 Shaunak Roy
+    </div>
+
+</footer>
 
 </body>
 </html>
